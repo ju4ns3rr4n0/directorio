@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Directorio Telefonico</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Directorio Telefonico</a></h1>
+        </div>
+        {% for directorio in directorios %}
+            <div>
+                <h1><a href="">{{ directorio.persona}}</a></h1>
+                <p>{{ directorio.telefono|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
