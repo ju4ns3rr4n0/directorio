@@ -1,21 +1,10 @@
-{% load staticfiles %}
-<html>
-    <head>
-        <title>Directorio Telefonico</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/directorio.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="">Directorio Telefónico</a></h1>
+{% extends 'directorio/base.html' %}
+
+{% block content %}
+    {% for directorio in directorios %}
+        <div class="directorio">
+            <h1><a href="">{{ directorio.persona}}</a></h1>
+            <p>{{ directorio.telefono|linebreaksbr }}</p>
         </div>
-        {% for directorio in directorios %}
-            <div class="directorio">
-                <h1><a href="">{{ directorio.persona}}</a></h1>
-                <p>{{ directorio.telefono|linebreaksbr }}</p>
-            </div>
-        {% endfor %}
-    </body>
-</html>
+    {% endfor %}
+{% endblock content %}
