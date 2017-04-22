@@ -1,0 +1,24 @@
+Crear directorio del proyecto ==> mkdir listin
+Crear entorno virtual ==> python -m venv myvenv
+Activado entorno virutal ==> . myvenv/bin/activate
+Instalar django 1.8 en el entorno ==> pip install django==1.8
+Crear proyecto listin ==> django-admin.py startproject listin .
+Mofificar settings.py ==> LANGUAGE_CODE = 'es-es', TIME_ZONE = 'Europe/Madrid' y STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+Crear la BBDD ==> python manage.py migrate
+Crear la primera app ==> python manage.py startapp directorio
+Modificar settings.py para añadir la nueva app ==>  en INSTALLED_APPS añadimos 'directorio',
+Crear primer modelo Directorio ==> lo añadimos a directorio/models.py
+Crear tablas para los modelos en tu base de datos ==> python manage.py makemigrations
+Aplicar a la BBDD ==> python manage.py migrate directorio
+Registrar el modelo en admin.py ==> from .models import Directorio y admin.site.register(Directorio)
+Crear un superuser ==> python manage.py createsuperuser
+Crear un nuevo repositorio en github ==> https://github.com/ju4ns3rr4n0/directorio.git
+Iniciar repositorio para el proyecto ==> git init
+Confirmar usuario (solo una vez por proyecto) ==> git config user.name "ju4ns3rr4n0"
+Confirmar email (solo una vez por proyecto) ==> git config user.email ju4ns3rr4n0@gmail.com
+Crear fichero .gitignore y añadir:
+*.pyc
+__pycache__
+myvenv
+db.sqlite3
+.DS_Store
