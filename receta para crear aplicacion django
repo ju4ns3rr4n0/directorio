@@ -22,3 +22,12 @@ __pycache__
 myvenv
 db.sqlite3
 .DS_Store
+Realizar git status
+Realizar git add --all .
+Realizar git commit -m "Mi app Directorio, primer commit"
+Realizar git remote add origin https://github.com/ju4ns3rr4n0/directorio.git
+Realizar git push -u origin master
+Añadir a urls.py ==> url(r'', include('directorio.urls')),
+Crear archivo directorio/urls.py
+Creamos la vista en views.py
+Creamos el template 
